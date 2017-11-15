@@ -1,0 +1,2 @@
+C:\Users\Developer\source\repos\Angular_2 Demo\webApiEmployeeService\obj\Debug\webApiEmployeeService.csprojResolveAssemblyReference.cache
+C:\Users\Developer\source\repos\Angular_2 Demo\webApiEmployeeService\obj\Debug\webApiEmployeeService.csproj.CoreCompileInputs.cache

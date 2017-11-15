@@ -1,0 +1,11 @@
+<div>
+    <img style="width:100px;" height="72px;" src = '{{imagePath}}'/>
+     {{getHeader()}}
+    <h1>
+         {{pageHeader ? pageHeader : 'No Header'}}
+    </h1>
+         <my-employee></my-employee>
+</div>
+ <div>Name : <input [(ngModel)] = 'name'/>
+    <br/>
+ you entered : {{name}} </div>

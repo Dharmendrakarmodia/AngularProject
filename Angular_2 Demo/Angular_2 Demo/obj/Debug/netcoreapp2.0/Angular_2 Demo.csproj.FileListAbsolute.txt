@@ -1,0 +1,1 @@
+C:\Users\Developer\source\repos\Angular_2 Demo\Angular_2 Demo\obj\Debug\netcoreapp2.0\Angular_2 Demo.csprojResolveAssemblyReference.cache
