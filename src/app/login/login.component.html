@@ -1,0 +1,29 @@
+<div class='container login-container'>
+    <div class='row'>
+        <div class='col-md-4'></div>
+        <div class='col-md-4'>
+            <div class='panel panel-default login-form-pos'>
+                <div class='panel-body'>
+                    <form #loginForm='ngForm'>
+                        <h2 class='header-style'>Sign In</h2>
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" class="form-control control-style" name="emailid" placeholder='Email' [(ngModel)]='email' #emailID='ngModel' required >
+                       <div *ngIf='emailID.touched && emailID.invalid' class='err-msg'>Email Required</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd"></label>
+                            <input type="password" class="form-control control-style" name="pwd" placeholder='Password' [(ngModel)]='password' #pwd='ngModel' required>
+                            <div *ngIf='pwd.touched && pwd.invalid' class='err-msg'>Password Required</div>
+                        </div>
+                        <div class="checkbox display-div">
+                            <label><input type="checkbox"> Keep me logged in</label>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-pos" (click)='gotoHeroes()'>Sign In</button>
+                    </form>
+                </div>
+            </div> 
+        </div>
+        <div class='col-md-4'></div>
+    </div>   
+</div>

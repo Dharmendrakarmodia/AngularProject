@@ -1,0 +1,35 @@
+<employee-count>
+</employee-count>
+            <br/><br />
+<table>
+    <thead>
+        <tr>
+            <th>Emp Code </th>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Dept </th>
+            <th>Annual Salary</th>
+            <th>Joining Date</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor = "let employee of employeeList">
+        <tr  *ngIf = "selectedRadioButtonValue =='All' || selectedRadioButtonValue == employee.gender">
+            <td> {{employee.code}}</td>
+            <td> {{employee.name}}</td>
+            <td> {{employee.email}}</td>
+            <td> {{employee.dept}}</td>
+            <td> {{employee.salary | currency:'USD':true : '2.2-3'}}</td>
+            <td> {{employee.createdAt | date:'dd/MM/y' | uppercase}}</td>
+     
+        </tr>
+        <tr *ngIf="!employeeList || employeeList.length ==0">
+            <td colspan="5">Loading Data Please Wait!!</td>
+        </tr>
+        <tr *ngIf = "employeeList && employeeList.length ==0">
+            <td colspan="5">No EMployee Details to SHow</td>
+        </tr>
+        </ng-container>
+    </tbody>
+</table>
