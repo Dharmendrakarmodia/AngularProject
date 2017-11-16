@@ -3,27 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-
 import { AppComponent }  from './app.component';
+import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeListComponent } from './employee/employeeList.component';
-import { employeeTitle } from './employee/employeeTitle.pipe';
-import { employeeCountComponent } from './employee/employeeCount.component';
-import { simpleComponent } from './others/sample.component';
-import { HomeComponent } from './home/home.component';
-import { PagenotFoundComponent } from './others/PageNotFound.component';
 
 const appRoutes: Routes = [
-    { path: 'Home', component: HomeComponent },
-    { path: 'employees', component: EmployeeListComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', component: PagenotFoundComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'employee', component: EmployeeComponent },
+    { path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  }
+  ];
+  
 
 
-];
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes)],
-    declarations: [AppComponent, EmployeeComponent, EmployeeListComponent, employeeTitle, employeeCountComponent, simpleComponent, HomeComponent, PagenotFoundComponent ],
-    bootstrap:    [ AppComponent ]
+    declarations: [AppComponent,LoginComponent,EmployeeComponent],
+    bootstrap:    [ AppComponent ],
+    exports: [RouterModule]
 })
 export class AppModule { }
